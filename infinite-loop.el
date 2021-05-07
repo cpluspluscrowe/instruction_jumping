@@ -1,6 +1,3 @@
-
-                                        ; first need is to read some input file
-
 (defun follow-instruction (accumulator instruction-set index indices-history) 
   "Primary loop where we process instructions"
   (if (gethash index indices-history) accumulator ; base case if we've already run this instruction
@@ -32,7 +29,7 @@
   (setq instruction (car both))
   instruction)
 
+; main
 (setq input (f-read-text "test-input.txt" 'utf-8))
 (setq instruction-set (butlast (split-string input "\n")))
-
 (follow-instruction 0 instruction-set 0 (make-hash-table))
