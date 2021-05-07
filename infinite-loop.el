@@ -8,7 +8,7 @@
            (let ((instruction (get-instruction (car instruction-set))) 
                  (amount (get-amount (car instruction-set))))
                                         ; rotate is an O(N) time complexity, worse than array
-             ; printing because I haven't written tests
+                                        ; printing because I haven't written tests
              (progn (message "instruction: %s %d" instruction amount) 
                     (message "accumulator: %d" accumulator) 
                     (cond ((string= instruction ";nop") 
